@@ -1,4 +1,4 @@
-# [DifferentItFlights]
+# DifferentItFlights
 
 ---
 An implementation of an API using Django Rest Framework in Serverless Architecture
@@ -96,11 +96,11 @@ The urls that the API has are :
 
 1. Design of the API, using Django Rest, in this way we make use of Routers, Serializers, Views, Models, SQLite DB
 2. For Serverless implementation in AWS we used a python module that facilitates the deploy to AWS called ZAPPA, creating a lambda function [Here](https://www.youtube.com/watch?v=WaiL4sba).
-2.1 Because ZAPPA makes a connection to AWS services, we must create 1 user in IAM with the permissions to create S3 instances, Lambda, ApiGateway plus extra permissions, in case services such as EFS are used.
-2.2 Then we start ZAPPA with the command ``` zappa init``` where we will be asked for the access key and secret access key of the user we created in IAM, in addition to asking for the name we want to give to the lambda function and the address of our django project settings file.
-2.3 Once ZAPPA is configured, we must make the first deploy to AWS using ```zappa deploy dev``` being dev, the name of the environment that we defined in the previous step.
-2.4 As a result and if everything went correctly zappa init will return the URL of our gateaway with which we can make the http requests to our API.
-2.5 If we have made changes in the Django code, we can update our lambda using the command ```zappa update dev ```.
+2.1. Because ZAPPA makes a connection to AWS services, we must create 1 user in IAM with the permissions to create S3 instances, Lambda, ApiGateway plus extra permissions, in case services such as EFS are used.
+2.2. Then we start ZAPPA with the command ``` zappa init``` where we will be asked for the access key and secret access key of the user we created in IAM, in addition to asking for the name we want to give to the lambda function and the address of our django project settings file.
+2.3. Once ZAPPA is configured, we must make the first deploy to AWS using ```zappa deploy dev``` being dev, the name of the environment that we defined in the previous step.
+2.4. As a result and if everything went correctly zappa init will return the URL of our gateaway with which we can make the http requests to our API.
+2.5. If we have made changes in the Django code, we can update our lambda using the command ```zappa update dev ```.
 
 ### Resources consulted for development
 
