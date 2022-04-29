@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "aws_region": "us-east-2",
+        "django_settings": "DifferentItTest.settings",
+        "profile_name": "default",
+        "project_name": "differentittest",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-o8ypyo3vw"
+    }
+}
